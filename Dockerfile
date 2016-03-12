@@ -1,4 +1,4 @@
-FROM debian:8
+FROM node:argon
 MAINTAINER wikitolearn sysadmin@wikitolearn.org
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
@@ -7,13 +7,11 @@ RUN apt-get update && apt-get -y install zip unzip nano apt-utils curl rsync git
 
 ADD ./sources.list /etc/apt/
 
-RUN curl -sL https://deb.nodesource.com/setup | bash -
 
 RUN apt-get update && apt-get -y install ocaml && rm -f /var/cache/apt/archives/*deb
 RUN apt-get update && apt-get -y install screen && rm -f /var/cache/apt/archives/*deb
 RUN apt-get update && apt-get -y install sudo && rm -f /var/cache/apt/archives/*deb
 RUN apt-get update && apt-get -y install redis-server && rm -f /var/cache/apt/archives/*deb
-RUN apt-get update && apt-get -y install nodejs && rm -f /var/cache/apt/archives/*deb
 RUN apt-get update && apt-get -y install build-essential && rm -f /var/cache/apt/archives/*deb
 RUN apt-get update && apt-get -y install nodejs && rm -f /var/cache/apt/archives/*deb
 RUN apt-get update && apt-get -y install poppler-utils && rm -f /var/cache/apt/archives/*deb
