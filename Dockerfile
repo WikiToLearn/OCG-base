@@ -7,7 +7,6 @@ RUN apt-get update && apt-get -y install zip unzip nano apt-utils curl rsync git
 
 ADD ./sources.list /etc/apt/
 
-
 RUN apt-get update && apt-get -y install ocaml && rm -f /var/cache/apt/archives/*deb
 RUN apt-get update && apt-get -y install screen && rm -f /var/cache/apt/archives/*deb
 RUN apt-get update && apt-get -y install sudo && rm -f /var/cache/apt/archives/*deb
@@ -37,5 +36,3 @@ RUN apt-get update && apt-get -y install latex-xcolor && rm -f /var/cache/apt/ar
 
 RUN useradd -r -d /var/lib/ocg ocg
 RUN mkdir /var/lib/ocg
-RUN npm install es6-shim prfun  commander domino linewrap tmp sqlite3 -g
-
