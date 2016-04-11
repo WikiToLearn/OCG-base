@@ -1,4 +1,6 @@
 FROM node:argon
+ADD ./sources.list /etc/apt/sources.list
+
 MAINTAINER wikitolearn sysadmin@wikitolearn.org
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
