@@ -1,13 +1,13 @@
 #!/bin/bash
 
-#for pkg in $@
-#do
-#  if dpkg -s $pkg &> /dev/null
-#  then
-#    echo "Pakage "$pkg" is installed"
-#    exit 1
-#  fi
-#done
+for pkg in $@
+do
+  if dpkg -s $pkg &> /dev/null
+  then
+    echo "Pakage "$pkg" is installed"
+    exit 1
+  fi
+done
 
 apt-get update
 apt-get dist-upgrade -y
