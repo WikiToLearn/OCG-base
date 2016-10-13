@@ -11,7 +11,8 @@ done
 
 apt-get update
 apt-get dist-upgrade -y
-apt-get install -y $@
+apt-get install  --no-install-recommends  -y $@
 find /var/cache/apt/archives/ -type f -name '*deb' -delete
 find /var/lib/apt/lists/ -type f -delete
 find /var/log/ -type f -delete
+rm /tmp/* -Rf
