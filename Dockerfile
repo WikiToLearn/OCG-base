@@ -1,4 +1,4 @@
-FROM node:argon
+FROM node:6
 ADD ./docker-apt-get-install.sh /docker-apt-get-install.sh
 ADD ./sources.list /etc/apt/sources.list
 
