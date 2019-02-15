@@ -96,7 +96,7 @@ RUN /docker-apt-get-install.sh texlive-lang-polish
 RUN /docker-apt-get-install.sh texlive-lang-portuguese
 RUN /docker-apt-get-install.sh texlive-lang-spanish
 RUN /docker-apt-get-install.sh texlive-lang-all
-RUN /docker-apt-get-install.sh latex-xcolor
+RUN /docker-apt-get-install.sh texlive-latex-recommended latex-xcolor texlive-base texlive-binaries libgs9 libcupsimage2
 
 RUN /docker-apt-get-install.sh \
     at-spi2-core \
@@ -119,12 +119,10 @@ RUN /docker-apt-get-install.sh \
     libalgorithm-merge-perl \
     libaudio2:amd64 \
     libauthen-sasl-perl \
-    libcap-ng0:amd64 \
     libcolorhug2:amd64 \
     libdrm-intel1:amd64 \
     libdrm-nouveau2:amd64 \
     libdrm-radeon1:amd64 \
-    libelf1:amd64 \
     libencode-locale-perl \
     libfakeroot:amd64 \
     libfile-basedir-perl \
@@ -203,7 +201,6 @@ RUN /docker-apt-get-install.sh \
     swath \
     texlive-extra-utils \
     texlive-pstricks \
-    unzip \
     update-inetd \
     vprerex \
     xbitmaps \
