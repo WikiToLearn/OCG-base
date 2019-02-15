@@ -96,7 +96,7 @@ RUN /docker-apt-get-install.sh texlive-lang-polish
 RUN /docker-apt-get-install.sh texlive-lang-portuguese
 RUN /docker-apt-get-install.sh texlive-lang-spanish
 RUN /docker-apt-get-install.sh texlive-lang-all
-RUN /docker-apt-get-install.sh texlive-latex-recommended latex-xcolor texlive-base texlive-binaries libgs9 libcupsimage2
+RUN /docker-apt-get-install.sh latex-xcolor
 
 RUN /docker-apt-get-install.sh \
     at-spi2-core \
@@ -105,7 +105,6 @@ RUN /docker-apt-get-install.sh \
     colord-data \
     dbus \
     fakeroot \
-    fonts-lmodern \
     latex-cjk-all \
     latex-cjk-chinese-arphic-bkai00mp \
     latex-cjk-chinese-arphic-bsmi00lp \
@@ -137,9 +136,7 @@ RUN /docker-apt-get-install.sh \
     libgl1-mesa-dri:amd64 \
     libgphoto2-6:amd64 \
     libgphoto2-l10n \
-    libgphoto2-port10:amd64 \
     libgraphicsmagick++3 \
-    libgraphicsmagick3 \
     libgudev-1.0-0:amd64 \
     libgusb2:amd64 \
     libhtml-form-perl \
@@ -155,7 +152,6 @@ RUN /docker-apt-get-install.sh \
     libieee1284-3:amd64 \
     libio-html-perl \
     libio-socket-ssl-perl \
-    libllvm3.5:amd64 \
     liblwp-mediatypes-perl \
     liblwp-protocol-https-perl \
     libmailtools-perl \
